@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{useState} from 'react';
-import { StyleSheet, Text, View, TextInput, Pressable } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import RadioForm from 'react-native-simple-radio-button';
 import { Picker } from '@react-native-picker/picker';
 
@@ -116,9 +116,8 @@ export default function App() {
                 <Text>{promilles.toFixed(2)}</Text>
             </View>
 
-            <Pressable onPress={calculate}>
-                <Text style={styles.press}>Calculate</Text>
-            </Pressable>
+            <Button onPress={calculate} title="Calculate">
+            </Button>
             <StatusBar style="auto" />
         </View>
     );
@@ -134,12 +133,6 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginBottom: 10,
     },
-    press:{
-        textAlign: 'center',
-        marginTop: 20,
-        color: '#5bc0de',
-        
-        },
     field: {
         margin: 10,
     },
